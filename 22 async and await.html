@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async and await</title>
+</head>
+
+<body>
+    <script>
+
+        let getcheese = () => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const cheese = "🧀";
+                    resolve(cheese);
+                }, 2000);
+            });
+        };
+
+
+        let makedough = (cheese) => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const dough = cheese + "🥯";
+                    // reject("Bad cheese!");
+                    resolve(dough)
+                }, 2000);
+            });
+        };
+
+
+        let bakepizza = (dough) => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const pizza = dough + "🍕";
+                    resolve(pizza);
+                }, 2000);
+            });
+        };
+
+
+
+
+        async function orderPizza() {
+
+            try {
+                const cheese = await getcheese();
+                console.log("Here is the cheese", cheese);
+
+                const dough = await makedough(cheese);
+                console.log("Here is the dough", dough);
+
+                const pizza = await bakepizza(dough);
+                console.log("Here is the pizza", pizza);
+            } catch (error) {
+                console.log("Error occurred", error);
+            } finally {
+                console.log("I'll be executed always");
+            }
+
+
+        };
+
+        orderPizza()
+
+        //// or
+
+
+        // let a = orderPizza()
+        // a.then((data) => {
+        //     console.log(data);
+        // })
+
+
+
+        // *************************************************************************************************************************//
+
+
+
+
+
+
+
+        // other values written in a async function will be wrapped in a promise automatically
+        // Ex.
+
+        // async function rahul() {
+        //     return 4
+        // }
+        // rahul().then((x) => {
+        //     console.log(x);
+        // });
+
+
+
+
+
+
+
+
+        // ****************************************************************************//
+
+
+
+
+
+
+
+        // try and catch
+
+        // try {
+        //     console.log(Rahul);
+        // } catch (error) {
+        //     console.log(error);
+        // }
+
+
+
+
+
+        // try {
+        //     setTimeout(() => {
+        //         console.log(Rahul);
+        //     }, 2000);
+        // } catch (error) {
+        //     console.log(error);
+        // }
+
+        // it wont work because try catch works synchronously
+
+
+
+
+
+
+
+
+
+
+        // ****************************************************************************************************//
+        // Error object
+
+
+        // try {
+        //     throw new Error("This is an error")
+        // } catch (error) {
+        //     console.log(error.name);
+        //     console.log(error.message);
+        //     console.log(error.stack);
+        // }
+
+
+
+
+
+
+
+
+        // ***************************************************************************************************//
+
+        // The finally clause
+
+        // try {
+        //     console.log(Rahul);
+        // } catch (error) {
+        //     console.log(error);
+        // }
+        // finally {
+        //     console.log("I'll be executed always");
+        // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

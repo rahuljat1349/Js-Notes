@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+
+
+
+
+
+        // const url = "https://jsonplaceholder.typicode.com/todos/1";
+
+
+
+        // async function getdata() {
+        //     const req = await fetch(url);
+        //     const data = await req.json(); //we can't use response.something() twice..
+        //     console.log(data);
+        // }
+        // getdata();
+
+
+
+
+
+
+
+
+
+        //*******************************************************************************//
+
+
+
+
+
+        //CWH//
+
+
+        const createdata = async (data) => {
+            let url = "https://jsonplaceholder.typicode.com/posts/";
+            let options = {
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify(data)
+            };
+            const p = await fetch(url, options);
+            const R = await p.json();
+            return R;
+        };
+
+        const getdata = async (id) => {
+            let url = "https://jsonplaceholder.typicode.com/todos/" + id;
+            const g = await fetch(url);
+            const R = g.json();
+            return R;
+        }
+
+        const mainfunc = async () => {
+            let data = {
+                "Name": "Rahul",
+                "Address": "Jaipur",
+            };
+            const postR = await createdata(data);
+            console.log(postR);
+
+            const getR = await getdata(3);
+            console.log(getR);
+
+        };
+
+        mainfunc()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

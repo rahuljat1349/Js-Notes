@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swg</title>
+</head>
+
+<body>
+    <script>
+
+        let ran = Math.round(Math.random() * 2);
+        let arr = ["s", "w", "g"];
+        let str = arr[ran];
+
+        let inp = prompt("Enter s, w or g")
+
+        let guess = (str, inp) => {
+            if (str == inp) {
+                return "Tie"
+            }
+            else if (str == "w" && inp == "g") {
+                return "You lose"
+            }
+            else if (str == "w" && inp == "s") {
+                return "You won"
+            }
+            else if (str == "s" && inp == "g") {
+                return "You won"
+            }
+            else if (str == "s" && inp == "w") {
+                return "You lose"
+            }
+            else if (str == "g" && inp == "w") {
+                return "You won"
+            }
+            else if (str == "g" && inp == "s") {
+                return "You lose"
+            }
+
+        }
+        alert(guess(str, inp))
+    </script>
+</body>
+
+</html>

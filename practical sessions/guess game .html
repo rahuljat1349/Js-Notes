@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let,s play a game</title>
+</head>
+
+<body>
+    <script>
+        let rn = Math.round(Math.random() * 99 + 1);
+        guess = prompt("Guess a number between 1-100");
+        ch = 1;
+
+
+        while (true) {
+            if (guess == null) {
+                break;
+            }
+            else if (guess == rn) {
+
+                alert(`You got it, the number is ${rn} your score is ${100 - ch}`)
+                break;
+            }
+            else {
+                alert(`your number is ${guess < rn ? "smaller" : "BIGGER"} than the actual number`);
+                guess = prompt("Try again");
+                ch += 1;
+            }
+        };
+
+    </script>
+</body>
+
+</html>

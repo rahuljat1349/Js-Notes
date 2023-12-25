@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array methods</title>
+</head>
+
+<body>
+    <script>
+
+
+
+        // delete operator
+        let num = [1, 30, 27, 51, 42, 180];
+        console.log(num.length);
+
+
+
+        // delete num[2]; //it doesnt change the length of an array
+        // console.log(num);
+        // console.log(num.length);
+
+
+
+
+        //concatinating
+
+        // let num2 = [11, 12, 13, 14];
+        // let num3 = [50, 20, 49, 30];
+        // let newarray = num.concat(num2, num3);
+        // console.log(newarray);
+
+        //it does not change existing arrays
+
+
+
+
+
+
+
+        //sort method
+
+        // num.sort();
+        // console.log(num);
+
+
+        // it sorts alphabatically
+        // it changes original array
+
+
+        // for sorting in ascanding order, we have to give an extra compare function 
+
+        // let compare = (a, b) => a - b;
+
+        // num.sort(compare);
+        // console.log(num);
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // reverse 
+
+        // num.reverse();
+        // console.log(num);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // splice 
+        // num.splice(start index , no. of elements to remove,elements to add)
+        // it returns deleted values 
+
+
+
+        // let delval = num.splice(2, 4, 20, 40);
+        // console.log(num);
+
+        // console.log(delval);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // slicing
+        let newnum = num.slice(2)
+        console.log(newnum);
+        console.log(num);
+        //it does not change original array
+
+
+        newnum = num.slice(2, 5)
+        console.log(newnum);
+
+
+
+
+
+
+
+        // Array.from
+
+        let name = "Rahul";
+        let arr = Array.from(name);
+        console.log(arr)
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

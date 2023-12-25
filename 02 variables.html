@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+
+<body>
+    <script>
+        // var's scope is globel level and we can redeclare a var
+        // for instance..
+        var a = 22;
+        var a = 10
+
+        {
+            var a = "Rohit";
+            console.log(a);
+        }
+        console.log(a);
+
+
+
+
+
+        //but let's scope is block level and we can only update a let
+
+
+        let b = 55;
+        b = 21;
+
+
+        {
+            let b = "Rahul";
+            console.log(b);
+        }
+        console.log(b);
+
+
+
+
+
+
+
+        // const also has block level scope but we can't redeclare nor can we update it..
+
+        const Author = "Rahul";
+
+        {
+            const Author = 100
+            console.log(Author)
+
+        }
+        console.log(Author)
+
+        // but if a const is an object, we can change and add key/values in that object but we can't update that object with other object as mentioned earlier..
+        // Example..
+
+        const a1 = {
+            name: "Rahul"
+        }
+        console.log(a1)
+
+
+        a1["name"] = "Rohit";
+        a1["school"] = "gss"
+        console.log(a1)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local storage</title>
+</head>
+
+<body>
+    <script>
+
+
+        let key = prompt("enter a key you wanna set")
+        let value = prompt("enter a value you wanna set")
+
+
+        localStorage.setItem(key, value)
+
+        localStorage.getItem(key)
+
+        // localStorage.removeItem(key)
+
+        // localStorage.clear()
+
+        // localStorage.length
+
+        // localStorage.key(index)
+
+
+        // similarly session storage works
+
+
+
+
+
+
+
+        //*** storage event ***//
+
+        window.onstorage = () => {
+            console.log("changed");
+        }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

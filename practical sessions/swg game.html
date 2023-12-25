@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game</title>
+</head>
+
+<body>
+    <script>
+
+        let ran;
+        let str;
+
+        let cc = 0;
+        let ys = 0;
+
+
+        let inp;
+
+        while (cc < 10 && ys < 10) {
+
+
+            ran = Math.round(Math.random() * 2);
+            let arr = ["s", "w", "g"];
+            str = arr[ran];
+            inp = prompt("enter s, w or g")
+
+
+            if (inp == null) {
+                break;
+            }
+
+            else if (inp == str) {
+                alert("tie")
+
+            }
+
+
+            else if (inp == "w" && str == "g") {
+                ys += 1;
+                alert(`computer : ${str}/nyou : ${inp}/nyou score : ${ys}/ncomputer score : ${cc}`)
+
+            }
+
+
+            else if (inp == "w" && str == "s") {
+                cc += 1;
+                alert(`computer : ${str}\nyou : ${inp}\nyou score : ${ys}\ncomputer score : ${cc}`)
+            }
+
+
+            else if (inp === "s" && str == "g") {
+                cc += 1;
+                alert(`computer : ${str}\nyou : ${inp}\nyou score : ${ys}\ncomputer score : ${cc}`)
+            }
+
+
+            else if (inp == "s" && str == "w") {
+                ys += 1;
+                alert(`computer : ${str}\nyou : ${inp}\nyou score : ${ys}\ncomputer score : ${cc}`)
+            }
+
+
+            else if (inp == "g" && str == "s") {
+                ys += 1;
+                alert(`computer : ${str}\nyou : ${inp}\nyou score : ${ys}\ncomputer score : ${cc}`)
+            }
+
+
+            else if (inp == "g" && str == "w") {
+                cc += 1;
+                alert(`computer : ${str}\nyou : ${inp}\nyou score : ${ys}\ncomputer score : ${cc}`)
+            }
+
+
+
+        }
+
+
+        alert(`you ${ys > cc ? "won!" : "lose.."}\nyour score is : ${ys}\ncomputer's score is : ${cc}`)
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Amaranth', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background: rgb(57, 31, 31);
+        }
+
+        .main-container {
+            width: 20rem;
+            height: 10rem;
+            padding: .8rem .5rem;
+            margin: auto;
+            text-align: center;
+            background-color: rgb(17, 17, 17);
+            box-shadow: black 1rem 1rem 1rem;
+            border-radius: 1rem;
+
+            border: rgb(123, 123, 123) 1px solid;
+        }
+
+        span {
+            display: block;
+
+            font-size: 1.5rem;
+            color: rgb(105, 65, 65);
+        }
+
+        h2 {
+            color: rgb(186, 186, 186);
+
+            font-size: 2rem;
+            margin: 1rem;
+
+        }
+
+        p {
+            color: rgb(159, 155, 155);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-container">
+            <span>DIGITAL CLOCK</span>
+            <h2 id="time"></h2>
+            <p id="p"></p>
+
+        </div>
+    </div>
+    <script>
+
+
+        months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+        let time = () => {
+            let a = new Date()
+            let h = a.toLocaleTimeString()
+            let d = a.toDateString()
+
+
+            let time = document.getElementById("time")
+            let date = document.getElementById("p")
+
+            time.innerHTML = h;
+            date.innerHTML = d;
+            console.log(d)
+        }
+        setInterval(time, 0)
+
+    </script>
+</body>
+
+</html>

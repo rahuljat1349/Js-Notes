@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks</title>
+</head>
+
+<body>
+    <script>
+
+        //Reason we use callback
+
+
+        // let sayHello = () => console.log("Hello");
+
+        // let sayHi = () => console.log("Hi");
+
+
+        // let func = (callback) => callback();
+
+
+        // func(sayHello)
+        // func(sayHi)
+
+
+        // //or we can pass an undecleared function as well
+        // func(() => console.log("Bye.."))
+
+
+
+
+        // ************************************************************************//
+
+
+
+
+        // Reason we will not use callbacks to control asyncronous nature of JavaScript
+        // unreadability,inversion of control, call back hell
+
+
+        // const greet = () => {
+        //     setTimeout(() => {
+        //         console.log("Hello")
+        //         setTimeout(() => {
+        //             console.log("Hi")
+        //             setTimeout(() => {
+        //                 console.log("Bye")
+        //             }, 2000)
+        //         }, 2000)
+        //     }, 2000)
+        // }
+
+        // greet()
+
+
+
+
+
+        // callback
+
+        let loadscript = (src, callback) => {
+            var script = document.createElement("script");
+            script.src = src;
+            document.body.appendChild(script);
+
+            script.onload = () => {
+                callback(src)
+            }
+
+        };
+
+
+
+
+        let onload = (src) => {
+            console.log("Script loaded successfully!");
+            console.log("Script loadec with SRC :", src);
+        }
+
+
+
+
+
+        loadscript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js", onload)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        let getcheese = (callback) => {
+            setTimeout(() => {
+                const cheese = "🧀";
+                callback(cheese);
+            }, 2000);
+        };
+
+        let makedough = (cheese, callback) => {
+            setTimeout(() => {
+                const dough = cheese + "🥯";
+                callback(dough);
+            }, 2000);
+        };
+
+        let bakepizza = (dough, callback) => {
+            setTimeout(() => {
+                const pizza = dough + "🍕"
+                callback(pizza);
+            }, 2000);
+        };
+
+
+
+        getcheese((cheese) => {
+            console.log("Here is cheese", cheese);
+            makedough(cheese, (dough) => {
+                console.log("Here is dough", dough);
+                bakepizza(dough, (pizza) => {
+                    console.log("Here is pizza", pizza)
+                })
+            });
+        });
+
+// This is called calback hell
+
+
+
+    </script>
+</body>
+
+</html>
