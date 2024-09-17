@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cookies</title>
-</head>
-
-<body>
-    <script>
 
         // we can see all cookies in a webpage by document.cookie
         // every cookie size must be of <= 4 kb
@@ -28,7 +18,3 @@
 
 
 
-    </script>
-</body>
-
-</html>

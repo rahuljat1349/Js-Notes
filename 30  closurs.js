@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CLOSURES</title>
-</head>
-
-<body>
-    <script>
         //closure = function along with it's lexical environment
 
         function init() {
@@ -26,7 +16,3 @@
 
         //arrow function use their parant's "this"
 
-    </script>
-</body>
-
-</html>

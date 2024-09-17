@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>practice</title>
-</head>
-
-<body>
-
-    <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>help </li>
-        <li>contact</li>
-    </ul>
-    <script>
         // let sentence = "My name is Rahul"
         // let word = "Rahul"
         // console.log(`The word "${word}" ${sentence.includes(word) ? "is" : "is not"} in the sentence`)
@@ -243,8 +226,3 @@
 
 
 
-
-    </script>
-</body>
-
-</html>

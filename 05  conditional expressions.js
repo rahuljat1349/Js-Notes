@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conditional expressions</title>
-</head>
-
-<body>
-    <script>
         // prompt 
         // const createPrompt = require('prompt-sync');
 
@@ -60,8 +50,3 @@
         // turnry operator
 
         console.log("You can", result >= 18 ? "drink" : "drink water")
-
-    </script>
-</body>
-
-</html>

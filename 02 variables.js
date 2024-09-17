@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Variables</title>
-</head>
-
-<body>
-    <script>
         // var's scope is globel level and we can redeclare a var
         // for instance..
         var a = 22;
@@ -66,8 +56,3 @@
         a1["name"] = "Rohit";
         a1["school"] = "gss"
         console.log(a1)
-
-    </script>
-</body>
-
-</html>

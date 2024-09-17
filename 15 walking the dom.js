@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM manipulation</title>
-</head>
-
-<body>
-    <p>hello</p>
-    <script>
 
 
 
@@ -179,10 +168,3 @@
 
 
 
-
-
-
-    </script>
-</body>
-
-</html>

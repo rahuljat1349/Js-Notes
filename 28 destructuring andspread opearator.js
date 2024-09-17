@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spread operator</title>
-</head>
-
-<body>
-    <script>
 
 
 
@@ -54,9 +44,3 @@
 
         console.log({ ...obj1, name: "vishnu" }); //changed the name
 
-
-
-    </script>
-</body>
-
-</html>

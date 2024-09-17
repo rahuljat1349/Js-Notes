@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Operators</title>
-</head>
-
-<body>
-    <script>
         let a = 10;
         let b = 3;
 
@@ -98,8 +88,3 @@
         x == 5 && y == 6; //true
         x == 5 || y == 7; //true
         !false; //true 
-
-    </script>
-</body>
-
-</html>

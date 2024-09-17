@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data types and objects</title>
-</head>
-
-<body>
-    <script>
         // nn ss bb u 
 
         let a = null; //null
@@ -38,7 +28,4 @@
         };
 
         console.log(item["RJ"], item.AK);
-    </script>
-</body>
-
-</html>
+   
